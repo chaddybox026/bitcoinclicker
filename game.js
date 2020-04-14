@@ -24,7 +24,16 @@ window.onbeforeunload = function closingCode() {
 //utility functions
 function updateValue(id) {
 
-  document.getElementById(id).value = this[id].toFixed(8);;
+  if (id.includes("Level")) {
+
+    document.getElementById(id).value = this[id].toFixed(0);
+
+  }
+  else {
+
+    document.getElementById(id).value = this[id].toFixed(8);
+
+  }
 
 }
 
@@ -37,6 +46,7 @@ function init() {
   faucetCost = 0.00000050;
 
   updateValue("faucetCost");
+  updateValue("faucetLevel");
 
 }
 
@@ -97,6 +107,7 @@ function faucetUpgrade() {
     wallet -= faucetCost;
     faucetCost *= Math.exp(1);
     updateValue("faucetCost");
+    updateValue("faucetLevel");
     updateValue("wallet");
 
   }
