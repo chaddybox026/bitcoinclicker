@@ -1,0 +1,13 @@
+body {
+
+  margin: 0;
+
+}
+.clicker, .buy {
+
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+
+}

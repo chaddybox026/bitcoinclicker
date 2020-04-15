@@ -6,22 +6,33 @@
     <meta charset="utf-8">
     <title>Bitcoin Clicker</title>
     <script src="./game.js"></script>
+    <link rel="stylesheet" href="./index.css">
 
   </head>
 
-  <body style= text-align:center>
+  <body>
 
-    <header>
+    <div class="clicker">
 
-      You have: <input type="text" id="wallet" disabled style= text-align:center> Bitcoin
+      <div class="wallet">
 
-    </header>
+        <input type="text" id="wallet" disabled style= text-align:center> Bitcoin
 
-    <button onclick="claim()">Claim Faucet</button>
+      </div>
 
-    <br>
+      <div class="bigButton">
 
-    <button onclick="faucetUpgrade()">Upgrade Faucet <input id="faucetCost" disabled style= text-align:center> Level <input id="faucetLevel" size="3" disabled style= text-align:center></button>
+        <button onclick="claim()">Claim Faucet</button>
+
+      </div>
+
+    </div>
+
+    <div class="buy">
+
+      <button onclick="faucetUpgrade()">Upgrade Faucet <input id="faucetCost" disabled style= text-align:center> Level <input id="faucetLevel" size="3" disabled style= text-align:center></button>
+
+    </div>
 
   </body>
 
